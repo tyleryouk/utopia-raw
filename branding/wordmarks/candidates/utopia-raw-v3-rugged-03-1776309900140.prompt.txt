@@ -1,0 +1,7 @@
+{
+  "prompt": "wordmark logo reading \"utopia raw\" in angular scratchy black ink strokes on white background, rough edges, sharp line endings not rounded, aggressive pen pressure, rugged raw aesthetic, NOT childish NOT bubbly NOT rounded, lowercase, minimal, correct spelling u-t-o-p-i-a r-a-w",
+  "style": "vector_illustration/line_art",
+  "model": "fal-ai/recraft-v3",
+  "image_size": "square_hd",
+  "generated_at": "2026-04-16T03:25:00.143Z"
+}

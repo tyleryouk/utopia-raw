@@ -1,0 +1,7 @@
+{
+  "prompt": "handwritten wordmark \"utopia raw\" drawn with a single thin black pen line on white paper. Each letter is a different size and different shape. The o is a tiny open circle not fully closed. The p has a bowl that does not connect to the stem, there is a visible gap. The t is drawn as a tall cross shape much taller than other letters. The u is drawn as a checkmark shape. The i is just a dot and a thin line. The a is a tiny open squiggle. Letters vary wildly in height and width. Thin consistent line weight like a fine tip pen, NOT thick brush strokes. Some strokes do not fully connect. White background. Single horizontal line of text.",
+  "style": "vector_illustration/line_art",
+  "model": "fal-ai/recraft-v3",
+  "image_size": "square_hd",
+  "generated_at": "2026-04-16T03:31:04.960Z"
+}

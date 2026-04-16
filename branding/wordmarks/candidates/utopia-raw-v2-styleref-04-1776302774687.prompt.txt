@@ -1,0 +1,7 @@
+{
+  "prompt": "wordmark logo, two words, reads \"utopia raw\" in lowercase handwritten black ink on white background, thin uneven strokes, minimal, correct spelling u-t-o-p-i-a r-a-w",
+  "style": "vector_illustration/line_art",
+  "model": "fal-ai/recraft-v3",
+  "image_size": "square_hd",
+  "generated_at": "2026-04-16T01:26:14.689Z"
+}

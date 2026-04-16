@@ -37,16 +37,13 @@ function parseArgs() {
   const opts = {
     prompt: null,
     count: 1,
-    // Recraft's closest vector style to sharpie/hand-drawn aesthetic.
-    // Full list of valid styles at:
-    //   https://fal.ai/models/fal-ai/recraft-20b/api
-    // Best candidates for Utopia Raw: vector_illustration/line_art,
-    // vector_illustration/doodle_line_art, vector_illustration/linocut
     style: 'vector_illustration/line_art',
+    styleId: null, // Custom style_id from create-style.mjs — requires recraft-v3 endpoint
     slug: 'utopia-raw',
-    // recraft-20b is the current model with correct URL structure.
-    // (fal-ai/recraft/v3/text-to-vector returns broken response_urls.)
-    model: 'fal-ai/recraft-20b',
+    // When using styleId, recraft-v3 is the correct endpoint (recraft-20b rejects
+    // the combination with a downstream error). When using plain preset style,
+    // recraft-20b is fine.
+    model: 'fal-ai/recraft-v3',
     imageSize: 'square_hd',
   };
   for (let i = 0; i < args.length; i++) {
@@ -54,6 +51,7 @@ function parseArgs() {
     if (a === '--prompt') opts.prompt = args[++i];
     else if (a === '--count') opts.count = Number(args[++i]);
     else if (a === '--style') opts.style = args[++i];
+    else if (a === '--style-id') opts.styleId = args[++i];
     else if (a === '--slug') opts.slug = args[++i];
     else if (a === '--model') opts.model = args[++i];
     else if (a === '--image-size') opts.imageSize = args[++i];
@@ -132,9 +130,17 @@ async function downloadSvg(url) {
 async function generateOne(falKey, opts, n) {
   const body = {
     prompt: opts.prompt,
-    style: opts.style,
     image_size: opts.imageSize,
   };
+  // When using a custom style_id, also send the base_style the style was
+  // derived from (vector_illustration). Without the base, fal defaults to
+  // realistic_image which Recraft rejects as incompatible with a vector style_id.
+  if (opts.styleId) {
+    body.style_id = opts.styleId;
+    body.style = 'vector_illustration';
+  } else {
+    body.style = opts.style;
+  }
   console.log(`  [${n}] submitting to ${opts.model}...`);
   const submission = await submitRequest(falKey, opts.model, body);
   const statusUrl = submission.status_url;
@@ -175,11 +181,15 @@ async function generateOne(falKey, opts, n) {
 async function main() {
   const opts = parseArgs();
   console.log('Utopia Raw wordmark generator');
-  console.log(`  model:  ${opts.model}`);
-  console.log(`  style:  ${opts.style}`);
-  console.log(`  count:  ${opts.count}`);
-  console.log(`  slug:   ${opts.slug}`);
-  console.log(`  prompt: ${opts.prompt.slice(0, 80)}${opts.prompt.length > 80 ? '...' : ''}`);
+  console.log(`  model:    ${opts.model}`);
+  if (opts.styleId) {
+    console.log(`  style_id: ${opts.styleId}`);
+  } else {
+    console.log(`  style:    ${opts.style}`);
+  }
+  console.log(`  count:    ${opts.count}`);
+  console.log(`  slug:     ${opts.slug}`);
+  console.log(`  prompt:   ${opts.prompt.slice(0, 80)}${opts.prompt.length > 80 ? '...' : ''}`);
   console.log('');
 
   const falKey = await loadFalKey();
