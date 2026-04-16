@@ -1,0 +1,36 @@
+{
+  "$schema": "Utopia Suite brand tokens — source of truth at ~/.claude/rules/utopia-brand-system.md",
+  "palette": {
+    "primary": {
+      "hex": "#0A0A0A",
+      "name": "near-black",
+      "usage": "wordmark, CTA, primary text"
+    },
+    "secondary": {
+      "hex": "#755540",
+      "name": "warm-brown",
+      "usage": "accents, tags, secondary text, tagline"
+    },
+    "background_primary": {
+      "hex": "#F0E4CB",
+      "name": "cream",
+      "usage": "primary background, section fills"
+    },
+    "background_alt": {
+      "hex": "#F2EFE5",
+      "name": "ivory",
+      "usage": "alternate background, label background"
+    }
+  },
+  "rules": [
+    "Four colors only. Every asset — bottle, label, website, Instagram grid, TikTok overlay — pulls from these four and no others. Enforced ruthlessly.",
+    "Primary on ivory = correct. Primary on cream = correct. Warm-brown on ivory = correct. Ivory text on primary = only for reversed-out treatments.",
+    "NO gradients. NO drop shadows. NO gloss. NO foil. NO clear-label-on-bottle.",
+    "If a color outside this palette appears in an asset, the asset is off-brand."
+  ],
+  "references": {
+    "global_rule": "~/.claude/rules/utopia-brand-system.md",
+    "source_research": "~/.claude/research/4-15/utopia-suite-05-cpg.md §5 Brand System Extension",
+    "aesthetic_anchor": "Travis Scott UTOPIA album — see branding/references/"
+  }
+}

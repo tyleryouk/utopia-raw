@@ -1,0 +1,21 @@
+node_modules/
+.env
+.env.local
+.env.*.local
+.next/
+out/
+dist/
+build/
+.DS_Store
+*.log
+.vercel
+.turbo
+coverage/
+
+# Large raster assets (commit SVGs, not PNGs of them)
+branding/wordmarks/candidates/*.png
+branding/mockups/*.psd
+
+# Allow the selected wordmark PNG exports (for email attachments)
+!branding/wordmarks/selected/*.png
+!branding/labels/*.png

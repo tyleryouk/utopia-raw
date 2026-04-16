@@ -1,0 +1,36 @@
+{
+  "$schema": "Utopia Suite typography — source of truth at ~/.claude/rules/utopia-brand-system.md",
+  "fonts": {
+    "wordmark": {
+      "family": "hand-drawn custom",
+      "reference": "Travis Scott UTOPIA album aesthetic — thin sharpie strokes, imperfect lowercase, artist signature",
+      "source": "AI-generated via Recraft V4 through fal.ai, refined in Illustrator/Figma",
+      "file": "branding/wordmarks/selected/utopia-raw-primary.svg",
+      "usage": "brand name only — do NOT use this font for body copy, product names, or anything else"
+    },
+    "display": {
+      "family": "Georgia",
+      "weight": "Regular",
+      "fallback": "serif",
+      "source": "system font, no license required",
+      "usage": "section headings, product names on site, pull quotes"
+    },
+    "body": {
+      "family": "Inter",
+      "weight": "400, 500, 600",
+      "fallback": "-apple-system, BlinkMacSystemFont, sans-serif",
+      "source": "Google Fonts, SIL Open Font License",
+      "usage": "all body copy, navigation, form inputs, email templates, ingredient lists"
+    }
+  },
+  "rules": [
+    "Three fonts only. The hand-drawn wordmark is brand-name-exclusive. Georgia is for display. Inter is for everything else.",
+    "NO italic Georgia except for the tagline 'Find Your Utopia.' — italic is a tagline signal.",
+    "NO font weights above 600 anywhere. Utopia Raw is quiet, not loud.",
+    "Ingredient lists on labels: Inter 6pt, tracked loose for small-size legibility."
+  ],
+  "references": {
+    "global_rule": "~/.claude/rules/utopia-brand-system.md",
+    "source_research": "~/.claude/research/4-15/utopia-suite-05-cpg.md §5 Brand System Extension"
+  }
+}
