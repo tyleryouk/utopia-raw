@@ -1,0 +1,7 @@
+{
+  "prompt": "minimalist hand-drawn wordmark logo reading \"utopia raw\" in thin uneven black sharpie strokes on pure white background, imperfect lowercase letterforms, exaggerated horizontal crossbar on the letter t, artist signature style, unfinished raw pen sketch aesthetic, high contrast black on white, centered square composition, reference Travis Scott UTOPIA album wordmark style",
+  "style": "vector_illustration/line_art",
+  "model": "fal-ai/recraft-20b",
+  "image_size": "square_hd",
+  "generated_at": "2026-04-16T01:13:05.945Z"
+}

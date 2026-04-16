@@ -37,9 +37,16 @@ function parseArgs() {
   const opts = {
     prompt: null,
     count: 1,
-    style: 'vector_illustration/hand_drawn',
+    // Recraft's closest vector style to sharpie/hand-drawn aesthetic.
+    // Full list of valid styles at:
+    //   https://fal.ai/models/fal-ai/recraft-20b/api
+    // Best candidates for Utopia Raw: vector_illustration/line_art,
+    // vector_illustration/doodle_line_art, vector_illustration/linocut
+    style: 'vector_illustration/line_art',
     slug: 'utopia-raw',
-    model: 'fal-ai/recraft/v3/text-to-vector',
+    // recraft-20b is the current model with correct URL structure.
+    // (fal-ai/recraft/v3/text-to-vector returns broken response_urls.)
+    model: 'fal-ai/recraft-20b',
     imageSize: 'square_hd',
   };
   for (let i = 0; i < args.length; i++) {

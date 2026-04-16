@@ -1,0 +1,7 @@
+{
+  "prompt": "minimalist hand-drawn wordmark logo reading \"utopia raw\" in uneven black doodle strokes on white, imperfect lowercase handwriting, exaggerated t crossbar, rough pen sketch, asymmetric letterforms, high contrast black on white, centered square composition",
+  "style": "vector_illustration/doodle_line_art",
+  "model": "fal-ai/recraft-20b",
+  "image_size": "square_hd",
+  "generated_at": "2026-04-16T01:13:49.142Z"
+}
