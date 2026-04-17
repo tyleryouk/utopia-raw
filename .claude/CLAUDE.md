@@ -73,8 +73,10 @@ utopia-raw/
 
 ## References
 
-- Research: `~/.claude/research/4-15/utopia-suite-05-cpg.md` (strategic reference)
-- Tactical plan: `~/.claude/research/4-15/utopia-suite-05-cpg-today.md` (Phase 0 playbook)
+- Research: `~/dev/utopia/.claude/research/4-15/utopia-suite-05-cpg.md` (strategic reference)
+- Tactical plan: `~/dev/utopia/.claude/research/4-15/utopia-suite-05-cpg-today.md` (Phase 0 playbook)
 - Global brand system: `~/.claude/rules/utopia-brand-system.md`
-- Parent business research: `~/.claude/research/4-15/utopia-suite-00-umbrella-architecture.md`
+- Parent business research: `~/dev/utopia/.claude/research/4-15/utopia-suite-00-umbrella-architecture.md`
+
+Note: Utopia Suite research was relocated from `~/.claude/research/` to `~/dev/utopia/.claude/research/` on 2026-04-16 (TODO #20) — the files belong with the Utopia Suite parent repo, not in 1000xagent's global folder.
 - User memory: `~/.claude/projects/-home-kxdev/memory/user_utopia_suite.md`
